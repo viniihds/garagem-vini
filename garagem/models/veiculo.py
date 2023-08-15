@@ -3,7 +3,7 @@ from .marca import Marca
 from .cor import Cor
 from .categoria import Categoria
 
-class veiculo(models.Model):
+class Veiculo(models.Model):
     modelo = models.CharField(max_length=150, default= "")
     ano = models.IntegerField(null= True, default=0)
     preco = models.DecimalField(max_digits=10, decimal_places=2, null= True, default=0)

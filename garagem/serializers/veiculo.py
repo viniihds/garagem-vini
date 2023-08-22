@@ -7,7 +7,7 @@ from garagem.models.veiculo import Veiculo
 class VeiculoSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = "__all__",
+        fields = "__all__"
         foto_attachment_key = SlugRelatedField(source ="foto", queryset =Image.objects.all(), slug_field="attachment_key", required= False, write_only=True
         ) 
 
@@ -21,4 +21,4 @@ class VeiculoDetailSerializer(ModelSerializer):
 class VeiculoListSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
-        fields = 'modelo', 'id', 'preco'
+        fields = ['modelo', 'id', 'preco']

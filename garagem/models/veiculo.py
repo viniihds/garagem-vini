@@ -1,7 +1,7 @@
 from django.db import models
-from .modelo import Modelo
-from .cor import Cor
-from .acessorio import Acessorio
+
+from garagem.models import Acessorio, Cor, Modelo
+
 from  uploader.models import Image
 
 

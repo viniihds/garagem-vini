@@ -9,5 +9,6 @@ class Modelo(models.Model):
 
     def __str__(self):
         return f"{self.marca} {self.nome}"
+    
     class Meta:
         verbose_name = "Modelo"

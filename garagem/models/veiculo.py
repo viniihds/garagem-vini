@@ -12,7 +12,7 @@ class Veiculo(models.Model):
     descricao = models.CharField(max_length=500, default="")
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
     acessorio = models.ManyToManyField(Acessorio, related_name="veiculos")
-    foto = models.ForeignKey(Image, related_name="+", on_delete=models.CASCADE, null=True, blank=True, default=None)
+    foto = models.ManyToManyField(Image, related_name="+", default=None)
 
     def __str__(self):
         return f"{self.modelo}({self.cor}, {self.ano})"
